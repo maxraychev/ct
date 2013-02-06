@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{10B0C7C8-2E20-449E-BEB2-DC01DCEA20CF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CoolToolSite.Tests</RootNamespace>
+    <AssemblyName>CoolToolSite.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>True</IsCodedUITest>
+    <TestProjectType>CodedUITest</TestProjectType>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AE.Net.Mail">
+      <HintPath>..\!bin\AE.Net.Mail.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\!bin\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\!bin\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.core, Version=2.6.2.12296, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\!bin\nunit.core.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.core.interfaces, Version=2.6.2.12296, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\!bin\nunit.core.interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.6.2.12296, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>packages\NUnit.2.6.2\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TechTalk.SpecFlow">
+      <HintPath>..\!bin\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
+    <Reference Include="ThoughtWorks.Selenium.Core">
+      <HintPath>..\!bin\ThoughtWorks.Selenium.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver">
+      <HintPath>..\!bin\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support">
+      <HintPath>..\!bin\WebDriver.Support.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\Project.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\WebBrowser.cs" />
+    <Compile Include="Pages\ContactListPage.cs" />
+    <Compile Include="Pages\HomePage.cs" />
+    <Compile Include="Pages\LoginPage.cs" />
+    <Compile Include="Pages\MarketplacePage.cs" />
+    <Compile Include="Pages\MarketplaceProjectsPage.cs" />
+    <Compile Include="Pages\MarketPlaceQuestsPage.cs" />
+    <Compile Include="Pages\MyQuestsPage.cs" />
+    <Compile Include="Pages\NewProjectForm.cs" />
+    <Compile Include="Pages\PageObject.cs" />
+    <Compile Include="Pages\ProjectPage.cs" />
+    <Compile Include="Pages\QuotaPage.cs" />
+    <Compile Include="Pages\SignUpFrame.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SanityTests\AllTests.cs" />
+    <Compile Include="SanityTests\Features\Login\CorrectLogin.feature.cs">
+      <DependentUpon>CorrectLogin.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SanityTests\Features\Project\AddQuestToProject.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AddQuestToProject.feature</DependentUpon>
+    </Compile>
+    <Compile Include="SanityTests\Features\Project\AddQuotaToProject.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AddQuotaToProject.feature</DependentUpon>
+    </Compile>
+    <Compile Include="SanityTests\Features\Project\BuyProject.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BuyProject.feature</DependentUpon>
+    </Compile>
+    <Compile Include="SanityTests\Features\Project\SetUpAndLaunchNewProject.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SetUpAndLaunchNewProject.feature</DependentUpon>
+    </Compile>
+    <Compile Include="SanityTests\Features\Questionnarie\BuyQuestionnarie.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BuyQuestionnarie.feature</DependentUpon>
+    </Compile>
+    <Compile Include="SanityTests\Features\SignUp\CorrectSignUp.feature.cs">
+      <DependentUpon>CorrectSignUp.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SanityTests\Features\Login\IncorrectLogin.feature.cs">
+      <DependentUpon>IncorrectLogin.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SanityTests\Steps\AddQuestToProjectSteps.cs" />
+    <Compile Include="SanityTests\Steps\BuyProjectSteps.cs" />
+    <Compile Include="SanityTests\Steps\BuyQuestionnarieSteps.cs" />
+    <Compile Include="SanityTests\Steps\CorrectLoginSteps.cs" />
+    <Compile Include="SanityTests\Steps\CorrectSignUpSteps.cs" />
+    <Compile Include="SanityTests\Steps\IncorrectLoginSteps.cs" />
+    <Compile Include="SanityTests\Steps\SetUpAndLaunchNewProjectSteps.cs" />
+    <Compile Include="SanityTests\Steps\Steps.cs" />
+    <Compile Include="SanityTests\Steps\VaidateConfirmationSteps.cs" />
+    <Compile Include="UI\05_CreateQuest_Mobile.cs" />
+    <Compile Include="UI\04_CreateQuest_Online.cs" />
+    <Compile Include="UI\12_DeleteProject_StatusDesign.cs" />
+    <Compile Include="UI\11_DeleteProject_StatusFinish.cs" />
+    <Compile Include="UI\10_DeleteProject_StausRun.cs" />
+    <Compile Include="UI\03_HomePage.cs" />
+    <Compile Include="UI\09_LaunchProject_Correct.cs" />
+    <Compile Include="UI\08_LaunchProject_Incorrect.cs" />
+    <Compile Include="UI\02_Login_Correct.cs" />
+    <Compile Include="UI\01_Login_Incorrect.cs" />
+    <Compile Include="UI\BaseTest.cs" />
+    <Compile Include="UI\SampleChaeckEmail.cs" />
+    <Compile Include="UI\TestLogin.cs" />
+    <Compile Include="UI\Util\Util.cs" />
+    <Compile Include="Utils\CommonHelper.cs" />
+    <Compile Include="Utils\EmailClient.cs" />
+    <Compile Include="Utils\EmailParser.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="RunSanityTests.bat" />
+    <None Include="SanityTests\Features\Login\CorrectLogin.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CorrectLogin.feature.cs</LastGenOutput>
+    </None>
+    <None Include="SanityTests\Features\Project\AddQuestToProject.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>AddQuestToProject.feature.cs</LastGenOutput>
+    </None>
+    <None Include="SanityTests\Features\Project\AddQuotaToProject.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>AddQuotaToProject.feature.cs</LastGenOutput>
+    </None>
+    <None Include="SanityTests\Features\Project\BuyProject.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BuyProject.feature.cs</LastGenOutput>
+    </None>
+    <None Include="SanityTests\Features\Project\SetUpAndLaunchNewProject.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SetUpAndLaunchNewProject.feature.cs</LastGenOutput>
+    </None>
+    <None Include="SanityTests\Features\Questionnarie\BuyQuestionnarie.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BuyQuestionnarie.feature.cs</LastGenOutput>
+    </None>
+    <None Include="SanityTests\Features\SignUp\CorrectSignUp.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CorrectSignUp.feature.cs</LastGenOutput>
+    </None>
+    <None Include="SanityTests\Features\Login\IncorrectLogin.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>IncorrectLogin.feature.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

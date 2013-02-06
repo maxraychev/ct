@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoolToolSite.Tests", "CoolToolSite.Tests.csproj", "{10B0C7C8-2E20-449E-BEB2-DC01DCEA20CF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{55E0F763-63E4-4F9F-A56E-6A731227C359}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10B0C7C8-2E20-449E-BEB2-DC01DCEA20CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10B0C7C8-2E20-449E-BEB2-DC01DCEA20CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10B0C7C8-2E20-449E-BEB2-DC01DCEA20CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10B0C7C8-2E20-449E-BEB2-DC01DCEA20CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
